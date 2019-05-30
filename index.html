@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue Calculator</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<style>
+		body{
+			padding-top: 30px;
+			background-color: lightgrey;
+		}
+
+		input{
+			text-align: right;
+		}
+
+	</style>
+</head>
+<body>
+<div class="container">
+	<div id="root">
+		
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-3">
+				<input type="text" class="form-control" v-model='result' disabled>
+			</div>
+			<div class="col-md-1">
+				<button type="button" class="btn btn-danger btn-block" @click='clearAll()'>CE</button>
+			</div>
+
+
+		</div>
+		<br/>
+		<div class="row">
+
+			<div class="col-md-4"></div>
+			<div class="col-md-1"><num @add='addNum(1)'>1</num></div>
+			<div class="col-md-1"><num @add='addNum(2)'>2</num></div>
+			<div class="col-md-1"><num @add='addNum(3)'>3</num></div>
+			<div class="col-md-1"><opr>+</opr></div>
+			<div class="col-md-4"></div>
+
+		</div><!--End of row 1 -->
+		<br/>
+		<div class="row">
+
+			<div class="col-md-4"></div>
+			<div class="col-md-1"><num @add='addNum(4)'>4</num></div>
+			<div class="col-md-1"><num @add='addNum(5)'>5</num></div>
+			<div class="col-md-1"><num @add='addNum(6)'>6</num></div>
+			<div class="col-md-1"><opr>-</opr></div>
+			<div class="col-md-4"></div>
+
+		</div><!--End of row 2 -->
+		<br/>
+		<div class="row">
+
+			<div class="col-md-4"></div>
+			<div class="col-md-1"><num @add='addNum(7)'>7</num></div>
+			<div class="col-md-1"><num @add='addNum(8)'>8</num></div>
+			<div class="col-md-1"><num @add='addNum(9)'>9</num></div>
+			<div class="col-md-1"><opr>*</opr></div>
+			<div class="col-md-4"></div>
+
+		</div><!--End of row 3 -->
+
+		<br/>
+		<div class="row">
+
+			<div class="col-md-4"></div>
+			<div class="col-md-1"><num @add='addNum(0)'>0</num></div>
+			<div class="col-md-1"><num>.</num></div>
+			<div class="col-md-1">
+				<button type="button" class="btn btn-success btn-block">=</button>
+			</div>
+			<div class="col-md-1"><opr>/</opr></div>
+			<div class="col-md-4"></div>
+
+		</div><!--End of row 3 -->
+
+	</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script src="Script.js"></script>
+</body>
+</html>
