@@ -37,7 +37,7 @@
 			<div class="col-md-1"><num @add='addNum(1)'>1</num></div>
 			<div class="col-md-1"><num @add='addNum(2)'>2</num></div>
 			<div class="col-md-1"><num @add='addNum(3)'>3</num></div>
-			<div class="col-md-1"><opr>+</opr></div>
+			<div class="col-md-1"><opr @add="addSym('+')">+</opr></div>
 			<div class="col-md-4"></div>
 
 		</div><!--End of row 1 -->
@@ -48,7 +48,7 @@
 			<div class="col-md-1"><num @add='addNum(4)'>4</num></div>
 			<div class="col-md-1"><num @add='addNum(5)'>5</num></div>
 			<div class="col-md-1"><num @add='addNum(6)'>6</num></div>
-			<div class="col-md-1"><opr>-</opr></div>
+			<div class="col-md-1"><opr @add="addSym('-')">-</opr></div>
 			<div class="col-md-4"></div>
 
 		</div><!--End of row 2 -->
@@ -59,7 +59,7 @@
 			<div class="col-md-1"><num @add='addNum(7)'>7</num></div>
 			<div class="col-md-1"><num @add='addNum(8)'>8</num></div>
 			<div class="col-md-1"><num @add='addNum(9)'>9</num></div>
-			<div class="col-md-1"><opr>*</opr></div>
+			<div class="col-md-1"><opr @add="addSym('*')">*</opr></div>
 			<div class="col-md-4"></div>
 
 		</div><!--End of row 3 -->
@@ -69,11 +69,11 @@
 
 			<div class="col-md-4"></div>
 			<div class="col-md-1"><num @add='addNum(0)'>0</num></div>
-			<div class="col-md-1"><num>.</num></div>
+			<div class="col-md-1"><opr @add="addSym('.')">.</opr></div>
 			<div class="col-md-1">
-				<button type="button" class="btn btn-success btn-block">=</button>
+				<calci @add="calculate">=</calci>
 			</div>
-			<div class="col-md-1"><opr>/</opr></div>
+			<div class="col-md-1"><opr @add="addSym('/')">/</opr></div>
 			<div class="col-md-4"></div>
 
 		</div><!--End of row 3 -->
