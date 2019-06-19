@@ -1,2 +1,2 @@
 # Vue-Calculator
-A simple calculator using Vue framework.
+A simple calculator using Vuejs.
